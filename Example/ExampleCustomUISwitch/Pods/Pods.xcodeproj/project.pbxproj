@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,9 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F9AC69F0B99D3D1E1CC0F44F572FCE5 /* CustomUISwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CustomUISwitch.framework; path = CustomUISwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F9AC69F0B99D3D1E1CC0F44F572FCE5 /* CustomUISwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomUISwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DAB3BBCADF02EA9E710DC7EB72009C9 /* Pods-ExampleCustomUISwitch-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleCustomUISwitch-frameworks.sh"; sourceTree = "<group>"; };
-		36EAAD64998C78C4E74B33F62B24C704 /* Pods_ExampleCustomUISwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExampleCustomUISwitch.framework; path = "Pods-ExampleCustomUISwitch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36EAAD64998C78C4E74B33F62B24C704 /* Pods_ExampleCustomUISwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleCustomUISwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A0EAEA0F7488FEC5B21EB68A6FA00E /* Pods-ExampleCustomUISwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleCustomUISwitch.release.xcconfig"; sourceTree = "<group>"; };
 		3D1CA69628B12DDB7DF803761015A7E9 /* CustomThumbView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomThumbView.swift; path = Sources/CustomUISwitch/CustomUISwitch/CustomThumbView.swift; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -43,7 +43,7 @@
 		75B0F0B68CC52B389BF852C3CFF50667 /* Pods-ExampleCustomUISwitch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleCustomUISwitch-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7D7EC492640349CD187C4D8774EA59BF /* Pods-ExampleCustomUISwitch-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleCustomUISwitch-Info.plist"; sourceTree = "<group>"; };
 		8E4E7E09021BCB4E48AF5D22CE44C14D /* CustomUISwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomUISwitch.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5F9AEB23226CDEBB9B3579CFFAD4733 /* Pods-ExampleCustomUISwitch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleCustomUISwitch-acknowledgements.plist"; sourceTree = "<group>"; };
 		CEC3C586A65A298F1488DA82D26A21A1 /* CustomSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomSwitch.swift; path = Sources/CustomUISwitch/CustomUISwitch/CustomSwitch.swift; sourceTree = "<group>"; };
 		D8D885D579124C77848C1AAC2F599CDF /* CustomUISwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CustomUISwitch.modulemap; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				35D4135B7462DBF18C4A04292150FBA7 /* Support Files */,
 			);
 			name = CustomUISwitch;
-			path = CustomUISwitch;
+			path = ../../../Sources/CustomUISwitch/CustomUISwitch;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -242,6 +242,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -321,11 +322,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ExampleCustomUISwitch/Pods-ExampleCustomUISwitch-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ExampleCustomUISwitch/Pods-ExampleCustomUISwitch.modulemap";
 				OTHER_LDFLAGS = "";
@@ -395,8 +392,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -484,11 +480,7 @@
 				INFOPLIST_FILE = "Target Support Files/CustomUISwitch/CustomUISwitch-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CustomUISwitch/CustomUISwitch.modulemap";
 				PRODUCT_MODULE_NAME = CustomUISwitch;
 				PRODUCT_NAME = CustomUISwitch;
@@ -520,11 +512,7 @@
 				INFOPLIST_FILE = "Target Support Files/CustomUISwitch/CustomUISwitch-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CustomUISwitch/CustomUISwitch.modulemap";
 				PRODUCT_MODULE_NAME = CustomUISwitch;
 				PRODUCT_NAME = CustomUISwitch;
@@ -557,11 +545,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ExampleCustomUISwitch/Pods-ExampleCustomUISwitch-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ExampleCustomUISwitch/Pods-ExampleCustomUISwitch.modulemap";
 				OTHER_LDFLAGS = "";
