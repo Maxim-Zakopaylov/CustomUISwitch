@@ -94,12 +94,21 @@ public class CustomSwitch: UIControl {
         }
     }
     
-    @IBInspectable public var thumbImage:UIImage? = nil {
+    @IBInspectable public var thumbOnImage:UIImage? = nil {
         didSet {
-            guard let image = thumbImage else {
+            guard let image = thumbOnImage else {
                 return
             }
-            thumbView.thumbImageView.image = image
+            thumbView.thumbOnImageView.image = image
+        }
+    }
+    
+	@IBInspectable public var thumbOffImage:UIImage? = nil {
+        didSet {
+            guard let image = thumbOffImage else {
+                return
+            }
+            thumbView.thumbOffImageView.image = image
         }
     }
     
@@ -348,6 +357,9 @@ extension CustomSwitch {
 extension CustomSwitch {
     
     fileprivate func setOnOffImageFrame() {
+		self.thumbView.thumbOnImageView.alpha = self.isOn ? 1.0 : 0.0
+		self.thumbView.thumbOffImageView.alpha = self.isOn ? 0.0 : 1.0
+		
         guard onImage != nil && offImage != nil else {
             return
         }
