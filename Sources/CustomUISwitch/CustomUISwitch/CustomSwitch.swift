@@ -250,13 +250,13 @@ extension CustomSwitch {
         })
     }
     
-    func setupViewsOnAction() {
+    public func setupViewsOnAction() {
         self.thumbView.frame.origin.x = self.isOn ? self.onPoint.x : self.offPoint.x
         self.backgroundColor = self.isOn ? self.onTintColor : self.offTintColor
         self.setOnOffImageFrame()
     }
 
-    func completeAction() {
+    public func completeAction() {
         self.isAnimating = false
         self.sendActions(for: UIControl.Event.valueChanged)
     }

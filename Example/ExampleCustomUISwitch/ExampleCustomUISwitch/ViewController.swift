@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        
+        customSwitch.setOn(on: true, animate: true)
     }
     
     private func setupUI() {
